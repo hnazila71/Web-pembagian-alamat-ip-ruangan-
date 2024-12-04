@@ -1,0 +1,112 @@
+/* Gaya umum untuk body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container utama untuk halaman */
+.container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Styling untuk judul halaman */
+h1 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Daftar Komputer */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Kontainer untuk daftar komputer dengan scroll */
+.computer-list-container {
+    max-height: 300px; /* Mengatur tinggi maksimal untuk scroll */
+    overflow-y: auto;  /* Menambahkan scroll vertikal */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    margin-bottom: 20px;
+}
+
+ul li {
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 0;
+    border-bottom: 1px solid #ddd; /* Memisahkan item satu sama lain */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Tombol Edit */
+ul li form button {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+ul li form button:hover {
+    background-color: #2980b9;
+}
+
+/* Styling untuk form */
+form {
+    margin-bottom: 20px;
+}
+
+form input[type="text"] {
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+form button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+/* Menambahkan margin pada tombol form */
+form br {
+    margin: 10px 0;
+}

@@ -59,6 +59,7 @@ class AuthController extends BaseController
     }
 
     // Fungsi autentikasi pengguna
+    // Fungsi autentikasi pengguna
     public function authenticate()
     {
         $model = new UserModel();
@@ -71,10 +72,11 @@ class AuthController extends BaseController
 
         // Verifikasi password dan login jika cocok
         if ($user && password_verify($password, $user['password'])) {
-            // Simpan sesi pengguna
+            // Simpan sesi pengguna dengan role
             session()->set([
                 'logged_in' => true,
                 'username' => $username,
+                'role' => $user['role'], // Menyimpan role ke dalam sesi
             ]);
 
             // Arahkan ke dashboard dengan pesan sukses
@@ -84,6 +86,7 @@ class AuthController extends BaseController
             return redirect()->back()->with('error', 'Username atau password salah.');
         }
     }
+
 
     // Fungsi untuk logout pengguna
     public function logout()
